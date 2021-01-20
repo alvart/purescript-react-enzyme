@@ -8,6 +8,7 @@ module Enzyme
   , module Shallow
   , module Wrapper
   , configure
+  , withGlobalDOM
   )
 where
 
@@ -52,3 +53,6 @@ import Prelude (Unit)
 
 -- | Configures the Enzyme adapter to provide compatibility with React.
 foreign import configure :: Effect Unit
+
+-- | Registers a global DOM so that Full Wrappers can be mounted.
+foreign import withGlobalDOM :: Effect Unit

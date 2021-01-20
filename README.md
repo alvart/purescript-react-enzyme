@@ -1,6 +1,7 @@
 # purescript-react-enzyme
 
 [![Build Status](https://travis-ci.com/alvart/purescript-react-enzyme.svg?branch=main)](https://travis-ci.com/alvart/purescript-react-enzyme)
+[![Pursuit](https://pursuit.purescript.org/packages/purescript-react-enzyme/badge)](https://pursuit.purescript.org/packages/purescript-react-enzyme)
 
 Purescript bindings for the [Enzyme](https://enzymejs.github.io/enzyme) library.
 
@@ -9,24 +10,13 @@ Purescript bindings for the [Enzyme](https://enzymejs.github.io/enzyme) library.
 ### Setting up the test environment before running any test
 
 Before you write any unit tests with Enzyme, make sure to configure the [Enzyme Adapter](https://www.npmjs.com/package/enzyme-adapter-react-16) and the [Global DOM](https://www.npmjs.com/package/global-jsdom) **if** you are planning to use Full wrappers as opposed to Shallow ones.
-
-#### Install external dependencies
-```sh
-yarn add -D jsdom jsdom-global
 ```
 
-#### Register the Global DOM
-Main.js
-```js
-exports.registerGlobalDOM = require("jsdom-global");
-```
-
-#### Configure the React Enzyme Adapter
 Main.purs
 ```purescript
 import Effect (Effect)
 import Effect.Aff (launchAff_)
-import Enzyme (configure)
+import Enzyme (configure, withGlobalDOM)
 import Prelude
 import Test.Spec.Reporter.Console (consoleReporter)
 import Test.Spec.Runner (runSpec)
@@ -35,14 +25,12 @@ main :: Effect Unit
 main =
   do
   configure
-  registerGlobalDOM
+  withGlobalDOM
   launchAff_ $ runSpec [ consoleReporter ]
     do
     calculatorSpec
     todoSpec
     enzymeSpec
-
-foreign import registerGlobalDOM :: Effect Unit
 ```
 
 ### Writing unit tests

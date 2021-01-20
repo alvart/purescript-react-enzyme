@@ -1,24 +1,24 @@
 {
-  "name": "purescript-react-enzyme",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "output"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alvart/purescript-react-enzyme"
-  },
-  "dependencies": {
-    "purescript-aff": "^5.1.2",
-    "purescript-console": "^4.4.0",
-    "purescript-effect": "^2.0.1",
-    "purescript-foreign": "^5.0.0",
-    "purescript-react": "^8.0.0"
-  },
-  "devDependencies": {
-    "purescript-spec": "^4.0.1"
-  }
+    "name": "purescript-react-enzyme",
+    "license": [
+        "MIT"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alvart/purescript-react-enzyme"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "output"
+    ],
+    "dependencies": {
+        "purescript-aff": "^v5.1.2",
+        "purescript-console": "^v4.4.0",
+        "purescript-effect": "^v2.0.1",
+        "purescript-foreign": "^v5.0.0",
+        "purescript-psci-support": "^v4.0.0",
+        "purescript-react": "^v8.0.0"
+    }
 }

@@ -10,7 +10,7 @@ where
 
 import Effect (Effect)
 import Effect.Aff (launchAff_)
-import Enzyme (configure)
+import Enzyme (configure, withGlobalDOM)
 import Prelude
 import Test.Enzyme.Full (spec) as Full
 import Test.Enzyme.Shallow (spec) as Shallow
@@ -22,10 +22,8 @@ main :: Effect Unit
 main =
   do
   configure
-  registerGlobalDOM
+  withGlobalDOM
   launchAff_ $ runSpec [ consoleReporter ]
     do
     describe "Full Wrapper" Full.spec
     describe "Shallow Wrapper" Shallow.spec
-
-foreign import registerGlobalDOM :: Effect Unit
