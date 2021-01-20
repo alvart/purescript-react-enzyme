@@ -3,7 +3,7 @@ sudo: required
 node_js:
   - "14"
 install:
-  - npm install -g yarn spago
+  - npm install -g purescript spago yarn
   - yarn
 script:
   - yarn build
