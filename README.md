@@ -10,7 +10,6 @@ Purescript bindings for the [Enzyme](https://enzymejs.github.io/enzyme) library.
 ### Setting up the test environment before running any test
 
 Before you write any unit tests with Enzyme, make sure to configure the [Enzyme Adapter](https://www.npmjs.com/package/enzyme-adapter-react-16) and the [Global DOM](https://www.npmjs.com/package/global-jsdom) **if** you are planning to use Full wrappers as opposed to Shallow ones.
-```
 
 Main.purs
 ```purescript
