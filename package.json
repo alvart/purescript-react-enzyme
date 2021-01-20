@@ -1,0 +1,37 @@
+{
+  "name": "purescript-react-enzyme",
+  "version": "1.0.0",
+  "description": "Purescript bindings for the Enzyme library",
+  "main": "index.js",
+  "scripts": {
+    "build": "spago build",
+    "postinstall": "spago -x test.dhall install",
+    "pretest": "spago -x test.dhall build",
+    "test": "spago -x test.dhall test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jalvart@github.com/alvart/purescript-react-enzyme.git"
+  },
+  "keywords": [
+    "purescript",
+    "react",
+    "enzyme"
+  ],
+  "author": "Jon Alvart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alvart/purescript-react-enzyme/issues"
+  },
+  "homepage": "https://github.com/alvart/purescript-react-enzyme#readme",
+  "devDependencies": {
+    "jsdom": "^16.4.0",
+    "jsdom-global": "^3.0.2"
+  },
+  "dependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}
