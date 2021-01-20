@@ -1,5 +1,7 @@
 # purescript-react-enzyme
 
+[![Build Status](https://travis-ci.com/alvart/purescript-react-enzyme.svg?branch=main)](https://travis-ci.com/alvart/purescript-react-enzyme)
+
 Purescript bindings for the [Enzyme](https://enzymejs.github.io/enzyme) library.
 
 ## Quickstart
